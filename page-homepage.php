@@ -47,7 +47,7 @@ Template Name: Homepage
 					                		$the_excerpt = get_the_excerpt();
 					                		if($the_excerpt != ""){
 					                			$the_excerpt = substr( $the_excerpt, 0, $excerpt_length );
-					                			echo $the_excerpt . '... ';
+					                			echo $the_post . '.? ';
 					                	?>
 					                	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="btn btn-primary">Read more &rsaquo;</a>
 					                	<?php } ?>
