@@ -28,14 +28,8 @@
 													<?php the_post_thumbnail( 'wpbs-featured' ); ?>
 													<p>
 														<?php
-															$excerpt_length = 500; // length of excerpt to show (in characters)
-															$the_excerpt = get_the_excerpt();
-															if($the_excerpt != ""){
-																$the_excerpt = substr( $the_excerpt, 0, $excerpt_length );
-																echo $the_excerpt;
+																echo the_content();
 														?>
-														<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="">Read more &rsaquo;</a>
-														<?php } ?>
 													</p>
 
 												</section> <!-- end article section -->
