@@ -25,11 +25,9 @@
 												</header> <!-- end article header -->
 
 												<section class="post_content">
-													<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+													<?php //the_post_thumbnail( 'wpbs-featured' ); ?>
 													<p>
-														<?php
-																echo the_content();
-														?>
+														<?php echo the_content();	?>
 													</p>
 
 												</section> <!-- end article section -->
