@@ -784,21 +784,21 @@ function get_wpbs_theme_options(){
        
     $header ="<div class='custom-input'>
         <div class='title-image'>
-          <span class='img-here'>header image goes here</span>
+          <span class='img-here'>HEADER IMAGE HERE</span>
         </div>
 
         <div class='title-text'>
-        add header text here
+        HEADER TEXT HERE
         </div>";
 
     $photo_grid = "
         <div class='photo-grid'>
-          <span class='img-here'>grid image here</span>
-          <span class='item-title'>Item title</span>
+          <span class='img-here'>THUMBNAIL HERE</span>
+          <span class='item-title'>ITEM TITLE</span>
           <span class='item-tagline'>Good for:</span>
-          <span class='item-suggestion'>Whats it good for?</span>
+          <span class='item-suggestion'>TEXTTEXTTEXT</span>
           <span class='item-tagline'>Better for:</span>
-          <span class='item-suggestion'>Whats it better for?</span>
+          <span class='item-suggestion'>TEXTTEXTEXT</span>
             <a href='PUT URL HERE'>I want it! »</a>
         </div>";
     $photo_row = "\n<div class='photo-row'>\n";
