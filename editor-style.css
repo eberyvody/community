@@ -66,3 +66,38 @@ h6 {
   color: #999999;
   text-transform: uppercase;
 }
+
+
+.photo-grid span {
+  border: 1px soild #FFFFFF;
+  display:block;
+  margin: 10px; 
+  padding: 10px;
+}
+
+
+.title-image {
+  background-color:#CCCCCC;
+  margin:20px;
+  padding: 10px;
+  border: 1px solid #FFFFFF;
+}
+.title-text {
+  background-color: #CCCCCC;
+  margin:20px;
+  padding:10px;
+}
+
+.photo-grid {
+  background-color:#CCCCCC;
+  margin: 20px;
+  padding: 10px;
+}
+
+
+.photo-grid span.img-here {
+  border: 1px solid #FFFFFF;
+  padding: 5px;
+  margin: 20px;
+  display:block;
+}

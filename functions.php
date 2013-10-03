@@ -776,4 +776,48 @@ function get_wpbs_theme_options(){
       }
 } // end get_wpbs_theme_options function
 
-?>
+
+  add_editor_style( 'editor-style.css' );
+
+  add_filter( 'default_content', 'custom_editor_content' );
+   function custom_editor_content( $content ) {
+       
+    $header ="<div class='custom-input'>
+        <div class='title-image'>
+          <span class='img-here'>header image goes here</span>
+        </div>
+
+        <div class='title-text'>
+        add header text here
+        </div>";
+
+    $photo_grid = "
+        <div class='photo-grid'>
+          <span class='img-here'>grid image here</span>
+          <span class='item-title'>Item title</span>
+          <span class='item-tagline'>Good for:</span>
+          <span class='item-suggestion'>Whats it good for?</span>
+          <span class='item-tagline'>Better for:</span>
+          <span class='item-suggestion'>Whats it better for?</span>
+            <a href='PUT URL HERE'>I want it! »</a>
+        </div>";
+    $photo_row = "\n<div class='photo-row'>\n";
+    
+    $content = $header;
+    $content .= $photo_row;
+
+    for ($i=0; $i<9; $i++) {
+      if($i > 0 && $i%3 != 0) {
+        $content .= $photo_grid;
+      } else {
+        $content .= "\n</div>".$photo_row;
+        $content .= $photo_grid;
+      }
+    }
+
+    $content .= "</div></div>";
+    return $content;
+   }
+
+
+  ?>
