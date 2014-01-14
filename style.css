@@ -57,12 +57,6 @@ body.admin-bar .navbar-fixed-top{
 	top: 28px;
 }
 
-.navbar .brand{
-	color: #000;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
-	font-weight: bold !important;
-}
-
 .nav-container{
 	padding-left: 0;
 	padding-right: 0;
@@ -88,10 +82,6 @@ input, textarea, select, .uneditable-input {
 	width: 100px;
 }
 
-#content{
-	padding: 10px 0 0;
-}
-
 .more-link{
 	white-space: nowrap;
 }
@@ -115,7 +105,8 @@ input, textarea, select, .uneditable-input {
 
 #main p.meta{
 	font-style: italic;
-	color: #808080;
+	color: #a7a7a8 !important;
+	font-size: 16px;
 }
 
 #main article{
@@ -343,6 +334,7 @@ img.aligncenter{
 
 header h3 {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
+	margin-bottom: 0px;
 }
 
 @media (max-width: 767px) {
@@ -676,9 +668,8 @@ blockquote.pull-left{
 
 /* custom stuff */
 body {
-	background-color: #efefef;
-	color: #555;
-	font-size: 16px;
+	color: #140500;
+	font-size: 18px;
 	line-height: 1.5em;
 }
 
@@ -693,14 +684,21 @@ header img {
 }
 
 #menu-main-nav {
-	float: right;
-	padding-top: 4px;
+	font-size: 14px;
+	padding-top: 10px;
 }
 
 .download-icon {
 	width: 250px;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.social-nav li {
+	list-style-type: none;
+	display: inline;
+	padding-left: 30px;
+	font-size: 14px;
 }
 
 aside {
@@ -716,7 +714,7 @@ aside p {
 aside.sidebar-download {
 	padding-top: 2em;
 	padding-bottom: 1em;
-	border-bottom: 1px dotted #aaa;
+	border-bottom: 1px solid #eaeaea;
 }
 
 aside.sidebar-download p {
@@ -725,12 +723,12 @@ aside.sidebar-download p {
 
 aside.newsletter-sidebar {
 	padding-bottom: 1em;
-	border-bottom: 1px dotted #aaa;
+	border-bottom: 1px solid #eaeaea;
 }
 
 aside.social-media-icons {
 	padding-bottom: 1em;
-	border-bottom: 1px dotted #aaa;
+	border-bottom: 1px solid #eaeaea;
 }
 
 aside.email-sidebar {
@@ -742,9 +740,6 @@ img {
 	padding-bottom: 1em;
 }
 
-.hero-unit-image {
-	border: 2px solid #eee;
-}
 
 .social-media-icons ul {
 	list-style: none;
@@ -781,7 +776,7 @@ img {
 
 #content #main p {
 	line-height: 1.5em;
-	color: #555;
+	color: #140500;
 }
 
 #content #main .page-header h1 {
@@ -809,8 +804,6 @@ img {
 }
 
 #content #main {
-	border: 2px solid #eee;
-	border-radius: 2px;
 	padding: 2em;
 }
 
@@ -822,8 +815,6 @@ img {
 #sidebar1 {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	background-color: #fff;
-	border: 2px solid #eee;
-	border-radius: 2px;
 	padding: 0 1em;
 }
 
@@ -835,21 +826,34 @@ img {
   box-shadow: none;
   -webkit-box-shadow: none;
   background-image: none;
+  margin: 20px auto;
+}
+
+.navbar .nav > li > a {
+	padding: 3px 30px 3px 0px;
+	font-weight: 300;
 }
 
 .navbar {
-  border-top: 4px solid #0f7ec2;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
+  height: 85px;
+}
+
+.navbar.nav ul {
+	margin: 0px 0px;
+}
+
+ul.social-nav {
+	padding-top: 10px;
 }
 
 .navbar-inner li a {
-  color: #007DC3 !important;
-  size: 1.5em !important;
+  color: #a7a7a8 !important;
 }
 
 .navbar-inner li a:hover {
-  color: #777 !important;
+  color: #333 !important;
 }
 
 .navbar, .navbar-fixed-top, .navbar-inner,
@@ -863,22 +867,89 @@ img {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	font-weight: 700;
+}
+
+.nav-collapse {
+	font-size: 14px;
+}
+
+.nav-collapse li {
+	padding: 10px 0 10px 20px;
 }
 
 .brand img {
 	padding: 0 !important;
+	height: 45px;
+	width: 111px;
+}
+
+
+.navbar .brand {
+	padding: 0 !important;
+	margin: 0 auto !important;
+	box-sizing: border-box;
+	display: block;
+	float: none;
+	text-align: center;
+	width: 150px;
 }
 
 #menu-header-nav {
 	padding-top: 3px;
 }
 
+.desktop-nav {
+	display: block;
+}
 
+.mobile-nav {
+	display: none;
+}
 
+@media (max-width: 769px) {
+	.desktop-nav {
+		display: none;
+	}
 
+	.mobile-nav {
+		display: block;
+	}
 
+	.brand {
+		float: left !important;
+	}
+}
 
+.btn.btn-navbar {
+	box-shadow: none;
+	background-image: none;
+	background-color: #fff;
+	text-shadow: none;
+	border: 1px solid #ddd;
+	border-bottom-color: #b3b3b3;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background-color: transparent;
+	border-radius: 2px;
+}
+
+span.icon-bar {
+	margin: 4px;
+	background-image: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #ccc !important;
+	display: block;
+}
 
 /* RESPONSIVE CRAP */
 
@@ -888,11 +959,13 @@ img {
 	}
 }
 
-@media only screen and (min-width: 980px) {
-	body{
-		padding-top: 60px;
+@media (max-width: 768px) {
+	#main {
+		margin-top: 30px;
 	}
+}
 
+@media only screen and (min-width: 980px) {
 	.container-fluid{
 		max-width: 970px;
 		margin: 0 auto;
@@ -904,9 +977,8 @@ img {
 		padding: 0;
 	}
 
-	#content{
-		padding-left: 0;
-		padding-right: 0;
+	#content {
+		padding: 10px 0 0;
 	}
 
 	.topbar-inner{
